@@ -353,15 +353,16 @@ ul { margin: 0; padding: 0; list-style: none; }
   z-index: 3;
 }
 .chip:hover .chip-label { opacity: 1; }
-/* Chips are evenly spaced 72° apart on a 46%-radius circle around the
+/* Chips are evenly spaced 60° apart on a 46%-radius circle around the
    core. Each is centered on its point (offset back by half its 58px
    size); left-anchored chips unfurl rightward, right-anchored ones
    unfurl leftward, so labels never clip the orbit edge. */
 .chip.c1 { top: calc(4% - 29px); left: calc(50% - 29px); }
-.chip.c2 { top: calc(35.8% - 29px); right: calc(6.25% - 29px); animation-delay: 1.2s; }
-.chip.c3 { top: calc(87.2% - 29px); right: calc(23% - 29px); animation-delay: 2.4s; }
-.chip.c4 { top: calc(87.2% - 29px); left: calc(23% - 29px); animation-delay: 3.6s; }
-.chip.c5 { top: calc(35.8% - 29px); left: calc(6.25% - 29px); animation-delay: 4.8s; }
+.chip.c2 { top: calc(27% - 29px); right: calc(10.16% - 29px); animation-delay: 1.2s; }
+.chip.c3 { top: calc(73% - 29px); right: calc(10.16% - 29px); animation-delay: 2.4s; }
+.chip.c4 { top: calc(73% - 29px); left: calc(10.16% - 29px); animation-delay: 3.6s; }
+.chip.c5 { top: calc(27% - 29px); left: calc(10.16% - 29px); animation-delay: 4.8s; }
+.chip.c6 { top: calc(96% - 29px); left: calc(50% - 29px); animation-delay: 6s; }
 
 @keyframes spin { to { transform: rotate(360deg); } }
 @keyframes float {
@@ -380,6 +381,7 @@ ul { margin: 0; padding: 0; list-style: none; }
   pointer-events: none;
 }
 .section > .container { position: relative; }
+#services > .container { max-width: 1440px; }
 
 .section-head { max-width: 640px; margin: 0 auto 48px; text-align: center; }
 .eyebrow {
@@ -410,7 +412,7 @@ ul { margin: 0; padding: 0; list-style: none; }
 /* ---------- Services ---------- */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, minmax(0, 1fr));
   gap: 22px;
 }
 .service-card {
